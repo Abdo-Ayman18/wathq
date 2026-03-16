@@ -1,0 +1,144 @@
+:root {
+  --main-color: #1e40af;
+}
+
+body {
+  /* font-family: "Nunito Sans", sans-serif; */
+  background: #F8FAFC;
+
+}
+
+/* <=====startTitle=====> */
+#add .contentAria  h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1e40af !important;
+}
+
+.title p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* <=====endTitle=====> */
+
+
+/* <=====startInput=====> */
+/* .search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding-right: 35px;
+  height: 2.375rem;
+  border-radius: .9rem;
+  border: 0.9px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 12px;
+  box-shadow: 0px 0.9px 2.7px 0px #0000001a;
+}
+
+.search-box input::placeholder {
+  font-size: 10px;
+  color: #999;
+} */
+
+/* <=====endInput=====> */
+
+
+/* <=======iconInput=======> */
+/* .search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 12px;
+}
+
+.icon-btn {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  background: #fff;
+} */
+
+/* <=====endInput=====> */
+
+
+
+/* <=====startContentBody=====> */
+#add .contentAria {
+  padding: 20px;
+}
+
+#add .tables {
+  padding: 35px 0;
+}
+
+#add .item button{
+  background-color: #fff !important;
+  color: #1e40af !important;
+  font-size: .75rem;
+  font-weight: bold;
+}
+
+.my-tabs {
+  border: 1px solid #E5E7EB80;
+  background-color: #E5E7EB80;
+  padding: 4px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+}
+
+#add .my-tabs .nav-link.active {
+    background-color: #1E40AF !important; 
+    color: white !important; 
+    box-shadow: 3px 3px 3px 3px rgba(51, 42, 228, 0.2) !important; 
+}
+/* <=====endContentBody=====> */
+
+
+
+/* <=====startTableFoot=====> */
+#add tfoot td {
+  border-bottom: none !important;
+}
+
+#add .custom-pagination {
+  gap: 8px;
+}
+
+#add .custom-pagination .page-link {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 10px;
+  color: #374151;
+}
+
+
+/* <=====endTableFoot=====> */
+/* btn add */
+#add .btn-add{
+  background-color: #16589a;
+  color: #fff; 
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition: box-shadow .5s , transform .5s;
+}
+#add .btn-add:hover{
+      box-shadow: none;
+  transform: translate(10px,10px);
+  cursor: pointer;
+}
+
+
+
+
