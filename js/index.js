@@ -35,6 +35,8 @@ let homeLink = document.getElementById("homeLin");
 let notificationsLogLink = document.getElementById("notificationsLogLin");
 let addLink = document.getElementById("addLin");
 let contactLink = document.getElementById("contactLin");
+let renewalGuideDesLink = document.getElementById("renewal-guide-desLin");
+let countactBtn = document.getElementById("countactBtn");
 
 // function تخفي كل السكاشن
 function hideAllPages(){
@@ -86,9 +88,37 @@ contactLink.addEventListener("click",(e)=>{
   behavior: "smooth"
 });
 });
+// renewal-guide-des
+renewalGuideDesLink.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("renewal-guide-des").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
 
+// countactBtn
+countactBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("contact").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
 
+// لما اضغط ع اي لينك ف  side bar  يختفي لوحده
+const offcanvasElement = document.getElementById('offcanvasNavbar');
+const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
 
+document.querySelectorAll('#offcanvasNavbar .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    offcanvas.hide();
+  });
+});
 
 
 
