@@ -36,7 +36,9 @@ let notificationsLogLink = document.getElementById("notificationsLogLin");
 let addLink = document.getElementById("addLin");
 let contactLink = document.getElementById("contactLin");
 let renewalGuideDesLink = document.getElementById("renewal-guide-desLin");
+let newDosLink = document.getElementById("newDosLin");
 let countactBtn = document.getElementById("countactBtn");
+let homeErrorBtn = document.getElementById("homeErrorBtn");
 
 // function تخفي كل السكاشن
 function hideAllPages(){
@@ -104,6 +106,28 @@ countactBtn.addEventListener("click",(e)=>{
   e.preventDefault();
   hideAllPages();
   document.getElementById("contact").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+
+// add new dos  اضافه وثيقه جديده 
+newDosLink.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("addNewDos").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+
+// homeErrorBtn
+homeErrorBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("home").classList.remove("d-none");
   window.scrollTo({
   top: 0,
   behavior: "smooth"

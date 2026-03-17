@@ -14,6 +14,8 @@
      <!-- fontawesome -->
      <link rel="stylesheet" href="css/all.min.css">
      <!-- mainStyle -->
+     <link rel="stylesheet" href="css/error.css">
+     <link rel="stylesheet" href="css/addNewDos.css">
      <link rel="stylesheet" href="css/renewal-guide-des.css">
      <link rel="stylesheet" href="css/notifications.css">
      <link rel="stylesheet" href="css/contactUs.css">
@@ -96,7 +98,7 @@
   </div>
 </nav>
 
-<main class="mt-5 pt-4">
+<main class="mt-5 pt-4 ">
   <!-- home -->
 <section id="home" class="">
   <div class="container">
@@ -236,8 +238,6 @@ SMS.</p>
     </div>
 </div>
 
-
-
 <!-- الأسئلة الشائعة Questions-->
 <div class="questions">
   <h2 class="text-center title my-4">الأسئلة الشائعة</h2>
@@ -329,8 +329,6 @@ SMS.</p>
   </div>
 </div>
 </div>
-
-
 
 <!-- تجنب الغرامات والتعطيل من اليوم  box -->
 <div class=" my-5 py-5 rounded-5 text-center box">
@@ -1371,12 +1369,148 @@ SMS.</p>
         </div>
       </div>
     </section>
+<!-- add new dos  اضافه وثيقه جديده -->
+    <section id="addNewDos"  class="bg-secondary-subtle d-none">
+      <div class="container justify-content-center align-items-center py-5">
+      <div class="card document-card p-5 shadow-sm shadow-lg">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="fw-bold mb-0 fs-4">إضافة وثيقة جديدة</h2>
+          <!-- <a href="#" class="text-secondary"
+            ><i class="fas fa-arrow-right rounded-2"></i
+          ></a> -->
+        </div>
+        <p class="text-muted small mb-4">
+          أدخل بيانات وثيقتك الرسمية بدقة لضمان استلام التنبيهات في موعدها.
+        </p>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-md-5">
+              <label class="form-label text-secondary small">نوع الوثيقة</label>
+              <select class="form-select px-5">
+                <option selected disabled>اختر نوع الوثيقة...</option>
+                <option>بطاقة رقم قومي</option>
+                <option>جواز سفر</option>
+                <option>رخصة قيادة</option>
+              </select>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label text-secondary small"
+                >الجهة المصدرة للوثيقة</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="مثال: مصلحة الأحوال المدنية"
+              />
+            </div>
+            <div class="col-md-5">
+              <label class="form-label text-secondary small"
+                >تاريخ انتهاء الوثيقة</label
+              >
+              <input type="date" class="form-control" />
+            </div>
+            <div class="col-md-5">
+              <label class="form-label text-secondary small"
+                >وسيلة التنبيه المفضلة</label
+              >
+
+              <div class="d-flex gap-3 mt-1">
+                <div
+                  class="form-check border rounded px-3 py-2 flex-grow-1 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input m-0"
+                    type="checkbox"
+                    id="email"
+                    checked
+                  />
+                  <label
+                    class="form-check-label m-0 cursor-pointer"
+                    for="email"
+                  >
+                    بريد إلكتروني
+                  </label>
+                </div>
+
+                <!-- <div
+                  class="form-check border rounded px-3 py-2 flex-grow-1 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input m-0 flex-shrink-0"
+                    type="checkbox"
+                    id="sms"
+                  />
+
+                  <label
+                    class="form-check-label m-0 flex-grow-1 cursor-pointer"
+                    for="sms"
+                  >
+                    رسالة SMS
+                  </label>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-12 mt-4">
+              <label class="form-label text-secondary small"
+                >صورة الوثيقة (اختياري)</label
+              >
+              
+              <div
+                class="upload-box img-folder border-dashed rounded text-center p-4"
+              >
+                <i class="fas fa-image fa-2x text-primary mb-2"></i>
+                <p class="mb-1 fw-bold">
+                  اسحب صورة الوثيقة هنا أو اضغط للاختيار
+                </p>
+                <span class="text-muted extra-small"
+                  >يدعم ملفات JPG, PNG, PDF (بحد أقصى 5 ميجا)</span
+                >
+              </div>
+            </div>
+
+            <div class="col-md-12 mt-3">
+              <div
+                class="alert alert-light border-4 d-flex align-items-center py-2 px-3 m-0 rounded-4"
+              >
+                <i class="fas fa-info-circle text-primary me-2"></i>
+                <small class="text-secondary"
+                  >سيتم إرسال التنبيهات قبل 30 يوماً، 15 يوماً، و 7 أيام من
+                  تاريخ الانتهاء المذكور أعلاه.</small
+                >
+              </div>
+            </div>
+
+            <div class="w-100 d-flex gap-2 mt-4">
+              <button type="submit" class="btn btn-primary flex-grow-1 py-2">
+                حفظ الوثيقة الآن
+              </button>
+              <button type="button" class="btn btn-outline-secondary px-4">
+                إلغاء
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
 
 </main>
 
+<!-- error -->
+ <div class=" py-5 mt-  text-center bg-white d-none" id="errors">
+  <h2 class="fw-bold"> الصفحه المطلوبه غير موجوده ! </h2>
+ <div class="w-25 mx-auto">
+   <img src="images/error-404.webp" alt="error-404" class="w-100">
+ </div>
+ <p class="text-secondary py-3 w-75 mx-auto">للأسف لم يتم العثور علي الصفحه التي طلبتها. قد يكون الرابط خاطئ او الصفحه حذفت.</p>
+ <a class="btn1 px-3 py-2 rounded-3 d-inline-block" id="homeErrorBtn"  href="#home"> الرجوع الي الصفحه الرئسيه  <i class="fas fa-regular fa-house fa-beat-fade"></i> </a>
+ </div>
 
 <!-- end footer -->
-  <div class="foot py-4 border-top border-1 border-secondary-subtle mt-5 text-center text-secondary">
+  <div class="foot py-4 border-top border-1 border-secondary-subtle  text-center text-secondary bg-secondary-subtle">
     <h5 class="small">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
   </div>
     <!-- loader -->
@@ -1407,62 +1541,3 @@ SMS.</p>
 </html>
 
 
-
-   <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom shadow">
-  <div class="container">
-    <div class="d-flex flex-column">
-      <a class="navbar-brand" href="#"> <i class="fa-solid fa-file-shield"></i> Wathiq</a>
-      <span class="small">Keep Your Documents Verified</span>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-center  ">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-file-circle-plus"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-regular fa-bell">s</i></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </a>
-          <ul class="dropdown-menu text-center bg-light">
-            <li><span class="dark-iecon"><i class="fa-solid fa-moon fs-4" style="color: #ffc800;"></i></span></li>
-            <li><hr class="dropdown-divider"></li>
-            <li> <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-regular fa-user fs-5"></i></a>
-        </li></li>
-            <li><hr class="dropdown-divider"></li>
-            <li>sign out</li>
-          </ul>
-        </li>
-      </ul>
-
-        
-      
-    </div>
-  </div>
-</nav> -->
-
-
-<!-- 
-<li class="nav-item dropdown">
-          <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </a>
-          <ul class="dropdown-menu text-center bg-light">
-            <li><span class="dark-iecon"><i class="fa-solid fa-moon fs-4" style="color: #ffc800;"></i></span></li>
-            <li><hr class="dropdown-divider"></li>
-            <li> <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-regular fa-user fs-5"></i></a>
-        </li></li>
-            <li><hr class="dropdown-divider"></li>
-            <li>sign out</li>
-          </ul>
-        </li> -->
