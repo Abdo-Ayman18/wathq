@@ -43,6 +43,8 @@ let homeErrorBtn = document.getElementById("homeErrorBtn");
 let dashBordLink = document.getElementById("dashBordLin");
 let dashboardAddDoc = document.getElementById("dashboardAddDoc");
 let signInNavbar = document.getElementById("signInNav");
+let startNowHomeHeader = document.getElementById("startNowHomeHead");
+let startNowHomeBox = document.getElementById("startNowHomeBox");
 
 // function تخفي كل السكاشن
 function hideAllPages(){
@@ -149,6 +151,26 @@ dashBordLink.addEventListener("click",(e)=>{
 });
 //sign In Navbar
 signInNavbar.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("signIn").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+//start Now Home Header
+startNowHomeHeader.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("signIn").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+//start Now Home Box
+startNowHomeBox.addEventListener("click",(e)=>{
   e.preventDefault();
   hideAllPages();
   document.getElementById("signIn").classList.remove("d-none");
