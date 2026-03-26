@@ -34,11 +34,15 @@ let pages = document.querySelectorAll("section");
 let homeLink = document.getElementById("homeLin");
 let notificationsLogLink = document.getElementById("notificationsLogLin");
 let addLink = document.getElementById("addLin");
+let adddocNewDoc = document.getElementById("adddocNewDoc");
 let contactLink = document.getElementById("contactLin");
 let renewalGuideDesLink = document.getElementById("renewal-guide-desLin");
 let newDosLink = document.getElementById("newDosLin");
 let countactBtn = document.getElementById("countactBtn");
 let homeErrorBtn = document.getElementById("homeErrorBtn");
+let dashBordLink = document.getElementById("dashBordLin");
+let dashboardAddDoc = document.getElementById("dashboardAddDoc");
+let signInNavbar = document.getElementById("signInNav");
 
 // function تخفي كل السكاشن
 function hideAllPages(){
@@ -74,6 +78,16 @@ addLink.addEventListener("click",(e)=>{
   e.preventDefault();
   hideAllPages();
   document.getElementById("add").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+// adddocNewDoc
+adddocNewDoc.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("addNewDos").classList.remove("d-none");
   window.scrollTo({
   top: 0,
   behavior: "smooth"
@@ -123,6 +137,37 @@ newDosLink.addEventListener("click",(e)=>{
 });
 });
 
+//dashboard
+dashBordLink.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("dashboard").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+//sign In Navbar
+signInNavbar.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("signIn").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+//dashboardAddDoc
+dashboardAddDoc.addEventListener("click",(e)=>{
+  e.preventDefault();
+  hideAllPages();
+  document.getElementById("addNewDos").classList.remove("d-none");
+  window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+});
+
 // homeErrorBtn
 homeErrorBtn.addEventListener("click",(e)=>{
   e.preventDefault();
@@ -134,17 +179,54 @@ homeErrorBtn.addEventListener("click",(e)=>{
 });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // لما اضغط ع اي لينك ف  side bar  يختفي لوحده
 const offcanvasElement = document.getElementById('offcanvasNavbar');
 const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
 
+// كل اللينكات ما عدا زر الإعدادات
 document.querySelectorAll('#offcanvasNavbar .nav-link').forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    
+    // لو اللينك فيه dropdown (يعني إعدادات) → متقفلش
+    if (link.getAttribute('data-bs-toggle') === 'dropdown') {
+      return;
+    }
+
     offcanvas.hide();
   });
 });
 
-
+// لما تختار عنصر من dropdown يقفل
+document.querySelectorAll('#offcanvasNavbar .dropdown-menu .nav-link, #offcanvasNavbar .dropdown-menu li').forEach(item => {
+  item.addEventListener('click', () => {
+    offcanvas.hide();
+  });
+});
 
 
 
